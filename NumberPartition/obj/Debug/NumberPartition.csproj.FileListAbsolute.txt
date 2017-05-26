@@ -1,0 +1,12 @@
+D:\Facility\TFSLocal\SGF\NumberPartition\NumberPartition\bin\Debug\NumberPartition.exe.config
+D:\Facility\TFSLocal\SGF\NumberPartition\NumberPartition\obj\Debug\NumberPartition.csprojResolveAssemblyReference.cache
+D:\Facility\TFSLocal\SGF\NumberPartition\NumberPartition\bin\Debug\NumberPartition.exe
+D:\Facility\TFSLocal\SGF\NumberPartition\NumberPartition\bin\Debug\NumberPartition.pdb
+D:\Facility\TFSLocal\SGF\NumberPartition\NumberPartition\obj\Debug\NumberPartition.exe
+D:\Facility\TFSLocal\SGF\NumberPartition\NumberPartition\obj\Debug\NumberPartition.pdb
+C:\Users\wilkes.santos\Desktop\NumberPartition\NumberPartition\NumberPartition\bin\Debug\NumberPartition.exe.config
+C:\Users\wilkes.santos\Desktop\NumberPartition\NumberPartition\NumberPartition\obj\Debug\NumberPartition.exe
+C:\Users\wilkes.santos\Desktop\NumberPartition\NumberPartition\NumberPartition\obj\Debug\NumberPartition.pdb
+C:\Users\wilkes.santos\Desktop\NumberPartition\NumberPartition\NumberPartition\bin\Debug\NumberPartition.exe
+C:\Users\wilkes.santos\Desktop\NumberPartition\NumberPartition\NumberPartition\bin\Debug\NumberPartition.pdb
+C:\Users\wilkes.santos\Desktop\NumberPartition\NumberPartition\NumberPartition\obj\Debug\NumberPartition.csprojResolveAssemblyReference.cache
