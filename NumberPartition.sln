@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberPartition", "NumberPartition\NumberPartition.csproj", "{BE034A39-37FE-4214-8EEA-E47A04BBB815}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GA.Web", "GA.Web\GA.Web.csproj", "{C87042BB-C91B-4520-A22A-15E9BBC9030C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,17 +17,12 @@ Global
 		{BE034A39-37FE-4214-8EEA-E47A04BBB815}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE034A39-37FE-4214-8EEA-E47A04BBB815}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE034A39-37FE-4214-8EEA-E47A04BBB815}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C87042BB-C91B-4520-A22A-15E9BBC9030C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C87042BB-C91B-4520-A22A-15E9BBC9030C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C87042BB-C91B-4520-A22A-15E9BBC9030C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C87042BB-C91B-4520-A22A-15E9BBC9030C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 2
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://facilitysolucoesweb.visualstudio.com/
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = NumberPartition\\NumberPartition.csproj
-		SccProjectName1 = NumberPartition
-		SccLocalPath1 = NumberPartition
 	EndGlobalSection
 EndGlobal

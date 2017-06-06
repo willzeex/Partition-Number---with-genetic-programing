@@ -10,3 +10,9 @@ C:\Users\wilkes.santos\Desktop\NumberPartition\NumberPartition\NumberPartition\o
 C:\Users\wilkes.santos\Desktop\NumberPartition\NumberPartition\NumberPartition\bin\Debug\NumberPartition.exe
 C:\Users\wilkes.santos\Desktop\NumberPartition\NumberPartition\NumberPartition\bin\Debug\NumberPartition.pdb
 C:\Users\wilkes.santos\Desktop\NumberPartition\NumberPartition\NumberPartition\obj\Debug\NumberPartition.csprojResolveAssemblyReference.cache
+C:\Users\wilkes.santos\Desktop\Projetos\Partition-Number---with-genetic-programing\NumberPartition\bin\Debug\NumberPartition.exe.config
+C:\Users\wilkes.santos\Desktop\Projetos\Partition-Number---with-genetic-programing\NumberPartition\obj\Debug\NumberPartition.exe
+C:\Users\wilkes.santos\Desktop\Projetos\Partition-Number---with-genetic-programing\NumberPartition\obj\Debug\NumberPartition.pdb
+C:\Users\wilkes.santos\Desktop\Projetos\Partition-Number---with-genetic-programing\NumberPartition\bin\Debug\NumberPartition.exe
+C:\Users\wilkes.santos\Desktop\Projetos\Partition-Number---with-genetic-programing\NumberPartition\bin\Debug\NumberPartition.pdb
+C:\Users\wilkes.santos\Desktop\Projetos\Partition-Number---with-genetic-programing\NumberPartition\obj\Debug\NumberPartition.csprojResolveAssemblyReference.cache
