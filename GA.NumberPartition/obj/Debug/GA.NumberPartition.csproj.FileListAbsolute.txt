@@ -1,0 +1,5 @@
+C:\Users\wilkes.santos\Desktop\Projetos\Partition-Number---with-genetic-programing\GA.NumberPartition\bin\Debug\GA.NumberPartition.dll
+C:\Users\wilkes.santos\Desktop\Projetos\Partition-Number---with-genetic-programing\GA.NumberPartition\bin\Debug\GA.NumberPartition.pdb
+C:\Users\wilkes.santos\Desktop\Projetos\Partition-Number---with-genetic-programing\GA.NumberPartition\obj\Debug\GA.NumberPartition.csprojResolveAssemblyReference.cache
+C:\Users\wilkes.santos\Desktop\Projetos\Partition-Number---with-genetic-programing\GA.NumberPartition\obj\Debug\GA.NumberPartition.dll
+C:\Users\wilkes.santos\Desktop\Projetos\Partition-Number---with-genetic-programing\GA.NumberPartition\obj\Debug\GA.NumberPartition.pdb

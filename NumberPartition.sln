@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberPartition", "NumberPa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GA.Web", "GA.Web\GA.Web.csproj", "{C87042BB-C91B-4520-A22A-15E9BBC9030C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GA.NumberPartition", "GA.NumberPartition\GA.NumberPartition.csproj", "{6BD1B91A-2274-4627-B739-96103A0EC8F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C87042BB-C91B-4520-A22A-15E9BBC9030C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C87042BB-C91B-4520-A22A-15E9BBC9030C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C87042BB-C91B-4520-A22A-15E9BBC9030C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BD1B91A-2274-4627-B739-96103A0EC8F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BD1B91A-2274-4627-B739-96103A0EC8F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BD1B91A-2274-4627-B739-96103A0EC8F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BD1B91A-2274-4627-B739-96103A0EC8F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
