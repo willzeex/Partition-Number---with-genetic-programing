@@ -18,9 +18,10 @@ namespace NumberPartition
 
 
             int numConjuntos = Convert.ToInt32(file[0]);
-            int geracoes = 200;
+            int geracoes = 10;
             double taxaCruzamento = 0.85;
             double taxaMutacao = 0.15;
+            int qtdIndividuos = 2000;
 
             foreach (var number in strNumbers)
                 ConjuntNumeros.Add(Convert.ToInt32(number));
@@ -28,16 +29,15 @@ namespace NumberPartition
             ConjuntNumeros.Sort((a, b) => a.CompareTo(b));
 
             int menorDiferenca = int.MaxValue;
-            var populacaoInicial = program.GeraPopulacaoInicial(1000, ConjuntNumeros.Count, numConjuntos);
 
             for (int i = 0; i < geracoes; i++)
             {
+                var populacaoInicial = program.GeraPopulacaoInicial(qtdIndividuos, ConjuntNumeros.Count, numConjuntos);
                 var populacaoMelhores = new List<Individuo>();
 
                 while (populacaoMelhores.Count < populacaoInicial.Count)
                 {
-                    
-                    program.Fitness(populacaoInicial, ConjuntNumeros);
+                    program.Fitness(populacaoInicial, ConjuntNumeros, numConjuntos);
 
                     var selecionados = program.Seleciona(populacaoInicial, 10);
 
@@ -47,7 +47,12 @@ namespace NumberPartition
 
                     program.Mutar(sorteados, taxaMutacao, numConjuntos);
 
-                    populacaoMelhores.AddRange(sorteados);
+                    program.Fitness(sorteados, ConjuntNumeros, numConjuntos); 
+                    
+                    foreach (var item in sorteados)
+                    {
+                        populacaoMelhores.Add(item);
+                    }
                 }
 
                 populacaoInicial = populacaoMelhores;
@@ -83,41 +88,31 @@ namespace NumberPartition
             return individuos;
         }
 
-        public void Fitness(List<Individuo> populacao, List<int> lsNumeros)
+        public void Fitness(List<Individuo> populacao, List<int> lsNumeros, int qtdConjutos)
         {
+            int[] vetorSoma;
             for (int i = 0; i < populacao.Count; i++)
             {
-                var somaConjutos = new Dictionary<int, int>();
+                vetorSoma = new int[qtdConjutos];
                 for (int j = 0; j < populacao[i].Gene.Count; j++)
                 {
-                    var conjunto = populacao[i].Gene[j];
-                    if (somaConjutos.ContainsKey(conjunto))
-                    {
-                        somaConjutos[conjunto] += lsNumeros[j];
-                    }
-                    else
-                    {
-                        somaConjutos.Add(conjunto, lsNumeros[j]);
-                    }
+                    vetorSoma[populacao[i].Gene[j]] += lsNumeros[j];
                 }
-                populacao[i].Peso = CalculaFitness(somaConjutos);
+                populacao[i].Peso = CalculaFitness(vetorSoma);
             }
         }
 
-        public int CalculaFitness(Dictionary<int, int> somaConjuntos)
+        public int CalculaFitness(int[] individuo)
         {
             var min = int.MaxValue;
             var max = 0;
-            int total = 0;
-            foreach (var item in somaConjuntos.Values)
+            foreach (var item in individuo)
             {
                 if (item < min)
                     min = item;
 
                 if (item > max)
                     max = item;
-
-                total += item;
             }
 
             return max - min;

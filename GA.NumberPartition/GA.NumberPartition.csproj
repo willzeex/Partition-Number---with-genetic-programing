@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Crossover.cs" />
     <Compile Include="Models\Individuo.cs" />
+    <Compile Include="Mutation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

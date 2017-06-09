@@ -9,25 +9,31 @@ namespace GA.NumberPartition
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="population"></param>
+        /// <param name="individuoOne"></param>
+        /// <param name="individuoTwo"></param>
         /// <param name="crossoverRate"></param>
-        /// <param name="qtdCromossomes"></param>
-        public void ToCross(List<Individuo> population, double crossoverRate)
+        /// <param name="populationLenth"></param>
+        /// <returns></returns>
+        public List<Individuo> ToCross(Individuo individuoOne, Individuo individuoTwo, double crossoverRate, int populationLenth)
         {
             var random = new Random();
+            var listIndividuos = new List<Individuo>();
             double crossoverRateEnable = random.NextDouble();
 
             if (crossoverRateEnable <= crossoverRate)
             {
-                int index = random.Next(0, population.Count);
+                int index = random.Next(0, populationLenth);
                 var aux = 0;
-                for (int i = 0; i < index; i++)
+                for (int i = index; i < populationLenth; i++)
                 {
-                    aux = population[0].Cromossome[i];
-                    population[0].Cromossome[i] = population[1].Cromossome[i];
-                    population[1].Cromossome[i] = aux;
+                    aux = individuoOne.Cromossome[i];
+                    individuoOne.Cromossome[i] = individuoTwo.Cromossome[i];
+                    individuoTwo.Cromossome[i] = aux;
                 }
             }
+            listIndividuos.Add(individuoOne);
+            listIndividuos.Add(individuoTwo);
+            return listIndividuos;
         }
     }
 }
