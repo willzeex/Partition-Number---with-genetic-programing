@@ -27,19 +27,27 @@ namespace NumberPartition
                 ConjuntNumeros.Add(Convert.ToInt32(number));
 
             ConjuntNumeros.Sort((a, b) => a.CompareTo(b));
+            
+            
+            int melhor = int.MaxValue;
 
-            int menorDiferenca = int.MaxValue;
-
+            var populacaoInicial = program.GeraPopulacaoInicial(qtdIndividuos, ConjuntNumeros.Count, numConjuntos);
             for (int i = 0; i < geracoes; i++)
             {
-                var populacaoInicial = program.GeraPopulacaoInicial(qtdIndividuos, ConjuntNumeros.Count, numConjuntos);
                 var populacaoMelhores = new List<Individuo>();
 
                 while (populacaoMelhores.Count < populacaoInicial.Count)
                 {
                     program.Fitness(populacaoInicial, ConjuntNumeros, numConjuntos);
-
                     var selecionados = program.Seleciona(populacaoInicial, 10);
+
+                    var testeIndividuo = selecionados[0];
+                    populacaoMelhores.Add(testeIndividuo);
+                    if (testeIndividuo.Peso < melhor)
+                    {
+                        melhor = testeIndividuo.Peso;
+                        Console.WriteLine(melhor);
+                    }
 
                     var sorteados = program.SorteioBinario(selecionados, 10);
 
@@ -47,23 +55,46 @@ namespace NumberPartition
 
                     program.Mutar(sorteados, taxaMutacao, numConjuntos);
 
-                    program.Fitness(sorteados, ConjuntNumeros, numConjuntos); 
-                    
-                    foreach (var item in sorteados)
-                    {
-                        populacaoMelhores.Add(item);
-                    }
+                    program.Fitness(sorteados, ConjuntNumeros, numConjuntos);
                 }
 
                 populacaoInicial = populacaoMelhores;
 
+
+                //var populacaoInicial = program.GeraPopulacaoInicial(qtdIndividuos, ConjuntNumeros.Count, numConjuntos);
+                //for (int i = 0; i < geracoes; i++)
+                //{                
+                //    var populacaoMelhores = new List<Individuo>();
+
+                //    while (populacaoMelhores.Count < populacaoInicial.Count)
+                //    {
+                //        program.Fitness(populacaoInicial, ConjuntNumeros, numConjuntos);
+
+                //        var selecionados = program.Seleciona(populacaoInicial, 10);
+
+                //        var sorteados = program.SorteioBinario(selecionados, 10);
+
+                //        program.Cruzar(sorteados, taxaCruzamento, ConjuntNumeros.Count);
+
+                //        program.Mutar(sorteados, taxaMutacao, numConjuntos);
+
+                //        program.Fitness(sorteados, ConjuntNumeros, numConjuntos); 
+
+                //        foreach (var item in sorteados)
+                //        {
+                //            populacaoMelhores.Add(item);
+                //        }
+                //    }
+
+                //    populacaoInicial = populacaoMelhores;
+
                 //teste
-                var teste = program.MenorFitness(populacaoInicial);
-                if (teste < menorDiferenca)
-                {
-                    menorDiferenca = teste;
-                    Console.WriteLine(menorDiferenca);
-                }
+                //var teste = program.MenorFitness(populacaoInicial);
+                //if (teste < menorDiferenca)
+                //{
+                //    menorDiferenca = teste;
+                //    Console.WriteLine(menorDiferenca);
+                //}
             }
 
             Console.WriteLine("================FIM=============");
